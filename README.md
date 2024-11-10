@@ -4,6 +4,8 @@
 
 **Prettier:** `npm run fmt`
 
+![img.png](img.png)
+
 ## Task
 
 Build a React Function Component that takes in JSON data as an argument and satisfies the following acceptance criteria.
