@@ -1,10 +1,12 @@
 # Nicholas Evans - JSON Explorer Challenge
 
+![explorer.gif](explorer.gif)
+
+## Commands 
+
 **To run:** `npm run dev`
 
 **Prettier:** `npm run fmt`
-
-![img.png](img.png)
 
 ## Task
 
