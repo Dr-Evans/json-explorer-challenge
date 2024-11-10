@@ -35,3 +35,7 @@ Build a React Function Component that takes in JSON data as an argument and sati
 - Keys are interactable, populating the json path for the selected key and displaying its value
 - Json path is editable, displaying the corresponding key's value, or undefined if the json path is invalid
 - Written in Typescript
+
+## Known Limitations
+
+- JSON keys cannot contain `.`

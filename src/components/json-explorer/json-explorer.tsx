@@ -17,11 +17,10 @@ export interface Props {
  * @constructor
  */
 export function JsonExplorer({ json, rootElement }: Props) {
-  const [jsonPath, setJsonPath] = useState('');
+  const [jsonPath, setJsonPath] = useState<string>('');
   const [value, setValue] = useState<JSONPrimitive | undefined>();
 
-  // Building this map would be very expensive if the json is complex
-  // But this is a simple
+  // Building this map would be very expensive if the json is complex or frequently changes
   const jsonPathMap = useMemo(() => {
     return buildJsonPathMap(json, rootElement);
   }, [json, rootElement]);
@@ -30,7 +29,7 @@ export function JsonExplorer({ json, rootElement }: Props) {
     <div className="json-explorer">
       <input
         type="text"
-        className={'json-path-input'}
+        className="json-path-input"
         value={jsonPath}
         placeholder="Property"
         onChange={(e) => {
@@ -41,7 +40,7 @@ export function JsonExplorer({ json, rootElement }: Props) {
           setValue(newValue);
         }}
       />
-      <div className={'json-path-value'}>{String(value)}</div>
+      <div className="json-path-value">{String(value)}</div>
       <JsonArea
         json={json}
         rootElement={rootElement}
@@ -77,7 +76,7 @@ function buildJsonPathMap(
         recurse(v, elementJsonPath);
       });
     } else {
-      // Handle object by iterating over its keys
+      // Handle object by iterating over its entries
       Object.entries(currentValue).forEach(([key, value]) => {
         const fieldJsonPath = `${currentJsonPath}.${key}`;
         recurse(value, fieldJsonPath);
