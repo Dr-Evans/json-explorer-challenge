@@ -1,0 +1,8 @@
+.json-explorer {
+  font-family: monospace;
+
+  & .json-path-value {
+    margin-top: 4px;
+    margin-bottom: 12px;
+  }
+}
