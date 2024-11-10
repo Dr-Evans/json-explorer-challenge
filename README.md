@@ -1,6 +1,7 @@
 # Nicholas Evans - JSON Explorer Challenge
 
 **To run:** `npm run dev`
+
 **Prettier:** `npm run fmt`
 
 ## Task
