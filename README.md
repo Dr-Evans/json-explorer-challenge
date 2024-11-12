@@ -38,4 +38,4 @@ Build a React Function Component that takes in JSON data as an argument and sati
 
 ## Known Limitations
 
-- JSON keys cannot contain `.`
+- JSON keys cannot contain `.`, `[`, or `]`
